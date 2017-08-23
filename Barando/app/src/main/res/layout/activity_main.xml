@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cucho.barando.MainActivity"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textViewQuickSearches"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/quick_searches"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="73dp">
+
+        <Button
+            android:id="@+id/buttonWithDiscount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/with_discount" />
+
+        <Button
+            android:id="@+id/buttonNearMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/near_me" />
+
+        <Button
+            android:id="@+id/buttonOpenNow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/open_now" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textViewDiscountsNowNearYou"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/discounts_now_and_near_you"
+        android:layout_weight="0.05" />
+
+    <ImageView
+        android:id="@+id/imageViewBar1"
+        android:layout_width="match_parent"
+        android:layout_height="189dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@mipmap/ic_launcher"
+        android:clickable="true"
+        android:onClick="goToBar"/>
+
+
+
+
+
+</LinearLayout>

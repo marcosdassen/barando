@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Barando</string>
+    <string name="desc_bar1">Craft beer bar</string>
+    <string name="desc_bar2">Elaborate drinks bar</string>
+    <string name="quick_searches">Quick Searches</string>
+    <string name="with_discount">With discount</string>
+    <string name="near_me">Near me</string>
+    <string name="open_now">Open now</string>
+    <string name="discounts_now_and_near_you">Discoutns now and near you</string>
+    <string name="favorites">Favorites</string>
+</resources>
