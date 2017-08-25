@@ -32,15 +32,19 @@ public class BarActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.bar_activity_layout);
         //String dbid = getIntent().getIntExtra("bdid",-1);
-        dialog.show(this,"Espere por favor","Descargando");
+       // dialog = new ProgressDialog(this);
 
+        dialog = ProgressDialog.show(this,"Espere por favor","Descargando");
         FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
 
         DatabaseReference reference = firebaseDatabase.getReference("bares/-KmncT0atjooRvRs4kON");
 
+
+
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+
                 bar = dataSnapshot.getValue(Bar.class);
                 System.out.println(bar);
 
@@ -66,8 +70,10 @@ public class BarActivity extends Activity {
                         startActivity(intent);
                     }
                 });
-                dialog.dismiss();
+            dialog.dismiss();
+
             }
+
 
             @Override
             public void onCancelled(DatabaseError databaseError) {

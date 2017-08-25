@@ -30,13 +30,13 @@ public class FavoritesActivity extends ListActivity {
         super.onCreate(icicle);
         setContentView(R.layout.favorites_acivity_layout);
         adapter=new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1,
+                R.layout.favorites_acivity_layout,
                 listItems);
         setListAdapter(adapter);
 
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         SharedPreferences.Editor editor = prefs.edit();
-        editor.putString("fav"+clickCounter,bar);
+        editor.putString("fav"+clickCounter,"bar"+clickCounter);
         editor.commit();
 
     }
